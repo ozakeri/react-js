@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {Component} from 'react'
 
-const Counter = () => {
+/*const Counter = () => {
     const [count, setCount] = useState(0)
     const [name, setName] = useState('')
     const handleChange = (e) => {
@@ -22,6 +22,32 @@ const Counter = () => {
         </div>
 
     )
-}
+}*/
 
-export default Counter
+
+export default class Counter extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '', count: 0
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <p>
+                    you click {this.state.count} item
+                </p>
+
+                <button onClick={() => this.setState({count: this.state.count + 1})}>
+                    click me
+                </button>
+
+                <input name={'name'} value={this.state.name} onChange={(e)=>this.setState({name : e.target.value})}/>
+
+            </div>
+        )
+    }
+}
