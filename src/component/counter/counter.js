@@ -1,4 +1,8 @@
 import React, {Component} from 'react'
+import "./counter.css";
+import Button from "./buttonStyle";
+import style from "./counter.module.css";
+
 
 /*const Counter = () => {
     const [count, setCount] = useState(0)
@@ -24,6 +28,13 @@ import React, {Component} from 'react'
     )
 }*/
 
+const myStyle = {
+    color : 'red',
+    fontWeight : 'bold',
+    fontsize : 50
+}
+
+
 
 export default class Counter extends Component {
 
@@ -37,13 +48,13 @@ export default class Counter extends Component {
     render() {
         return (
             <div>
-                <p>
+                <p className={style.tagStyle}>
                     you click {this.state.count} item
                 </p>
 
-                <button onClick={() => this.setState({count: this.state.count + 1})}>
+                <Button onClick={() => this.setState({count: this.state.count + 1})}>
                     click me
-                </button>
+                </Button>
 
                 <input name={'name'} value={this.state.name} onChange={(e)=>this.setState({name : e.target.value})}/>
 

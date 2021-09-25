@@ -1,0 +1,10 @@
+
+.tagStyle{
+    color: rebeccapurple;
+    font-size: 18px;
+    font-weight: bold;
+}
+.tagStyle:hover{
+    color: darkgreen;
+    cursor: pointer;
+}

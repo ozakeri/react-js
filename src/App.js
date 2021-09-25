@@ -1,7 +1,6 @@
 import './App.css';
-import React from "react";
-import Website from "./component/welcome";
-import Counter from "./component/counter";
+import React, {useState} from "react";
+
 
 /*function App() {
   return (
@@ -16,13 +15,31 @@ const App = () => {
         alert(name)
     }
 
-        return (
-            <div className="App">
-              {/*  <Website name="OMIDDDDDD" age={20} handler={() => clickHandler("One")}/>
+    const gotoSite = (e) => {
+        e.preventDefault();
+        console.log('google.com')
+    }
+
+    const [isToggleOn, setToggle] = useState(true);
+    const handleToggleClick = () => {
+        setToggle(!isToggleOn)
+    }
+
+    return (
+        <div className="App">
+            {/*  <Website name="OMIDDDDDD" age={20} handler={() => clickHandler("One")}/>
                 <Website name="Zakeri" age={30} handler={() => clickHandler("Two")}/>*/}
 
-                <Counter/>
-            </div>)
+            {/* <Counter/>*/}
+
+            <a href={'https://www.google.com/'} onClick={gotoSite}>
+                Click Me
+            </a>
+
+            <button onClick={handleToggleClick}>
+                {isToggleOn? 'ON' : 'OFF'}
+            </button>
+        </div>)
 
 }
 
