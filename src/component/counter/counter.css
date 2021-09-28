@@ -8,3 +8,7 @@
     color: darkgreen;
     cursor: pointer;
 }
+
+.error{
+    color: red;
+}

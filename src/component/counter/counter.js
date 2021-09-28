@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import "./counter.css";
 import Button from "./buttonStyle";
 import style from "./counter.module.css";
+import module from "./counter.module.css"
 
 
 /*const Counter = () => {
@@ -28,13 +29,6 @@ import style from "./counter.module.css";
     )
 }*/
 
-const myStyle = {
-    color : 'red',
-    fontWeight : 'bold',
-    fontsize : 50
-}
-
-
 
 export default class Counter extends Component {
 
@@ -48,7 +42,7 @@ export default class Counter extends Component {
     render() {
         return (
             <div>
-                <p className={style.tagStyle}>
+                <p className={module.tagStyle}>
                     you click {this.state.count} item
                 </p>
 
