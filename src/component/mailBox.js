@@ -7,7 +7,7 @@ const Email=(props)=>{
                 Hello
             </h1>
             {
-                props.messageList.length>0
+                props.messageList.length>0 &&
                 <h2>
                     you have {props.messageList.length} unread message
                 </h2>
